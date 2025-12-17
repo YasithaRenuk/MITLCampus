@@ -218,7 +218,7 @@ export default function Page() {
                 size="icon"
                 className="rounded-full w-12 h-12 border-gray-300 hover:border-[#00A8E8] hover:text-[#00A8E8]"
               >
-                <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
           </div>
