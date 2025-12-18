@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -51,7 +54,7 @@ const FAQSection: React.FC = () => {
 </p>
 
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Frequently Asked Questions
           </h2>
 
