@@ -26,13 +26,14 @@ export default function FeatureCard({
 
   return (
     
+    
     <Card
       className="
-        w-full max-w-sm           /* ✅ responsive width */
+        w-full max-w-sm           /*
         rounded-t-3xl rounded-b-xl 
         border border-gray-200 shadow-md 
         hover:shadow-lg transition 
-        p-4 sm:p-5               /* ✅ slightly tighter padding on mobile */
+        p-4 sm:p-5               /*
         bg-white 
         border-b-4 border-b-blue-300
       "
