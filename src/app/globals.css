@@ -184,3 +184,9 @@
     @apply font-sans;
   }
 }
+/* shadcn pagination active style */
+a[aria-current="page"] {
+  background-color: oklch(0.7579 0.1614 71.2);
+  color: white;
+  border-radius: 0.375rem;
+}
