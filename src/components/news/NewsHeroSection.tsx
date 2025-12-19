@@ -34,7 +34,7 @@ export default function AboutHeroSection() {
                 md:text-6xl
               "
             >
-              COURSES
+              NEWS & ANNOUNCEMENTS
             </h1>
 
             <p
@@ -45,8 +45,7 @@ export default function AboutHeroSection() {
                 md:mt-6 md:max-w-3xl md:text-lg
               "
             >
-              Choose from our diverse range of undergraduate and graduate programs
-              designed to prepare you for success.
+              Stay updated with the latest announcements, events, and academic  achievements.
             </p>
           </div>
         </div>

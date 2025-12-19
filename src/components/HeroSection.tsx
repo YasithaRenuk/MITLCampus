@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
           }}
         />
         {/* Overlay to keep text readable in both themes */}
-        <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+        <div className="absolute inset-0  dark:bg-black/60" />
       </div>
 
       {/* Content */}

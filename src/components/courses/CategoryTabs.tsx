@@ -1,5 +1,10 @@
+"use client";
+
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@/components/ui/toggle-group";
 
 interface CategoryTabsProps {
   onCategoryChange?: (category: string) => void;
@@ -21,51 +26,55 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({
     "Bussiness Management",
   ];
 
-  const handleCategoryClick = (category: string) => {
-    setActiveCategory(category);
-    onCategoryChange?.(category);
+  const handleChange = (value: string) => {
+    if (!value) return; // ToggleGroup can emit empty
+    setActiveCategory(value);
+    onCategoryChange?.(value);
   };
 
   return (
     <div className="w-full flex justify-center py-4 font-sans">
-      <div className="w-full max-w-6xl flex justify-center">
-        <div className="overflow-x-auto scrollbar-hide">
-          {/* ✅ removed px-1 to remove the gap */}
-          <div className="inline-flex items-stretch rounded-full border border-primary overflow-hidden min-w-max mx-auto bg-card">
-            {categories.map((category, index) => {
-              const isActive = activeCategory === category;
-              const isFirst = index === 0;
-              const isLast = index === categories.length - 1;
+      <ToggleGroup
+        type="single"
+        value={activeCategory}
+        onValueChange={handleChange}
+        className="
+          inline-flex items-stretch
+          rounded-full border border-primary
+          overflow-hidden bg-card
+        "
+      >
+        {categories.map((category, index) => {
+          const isFirst = index === 0;
+          const isLast = index === categories.length - 1;
 
-              return (
-                <Button
-                  key={category}
-                  onClick={() => handleCategoryClick(category)}
-                  variant="ghost"
-                  className={`
-                    h-auto rounded-none shadow-none border-0
-                    text-[11px] xs:text-xs sm:text-sm
-                    px-3 sm:px-5 py-2 whitespace-nowrap transition-colors
+          return (
+            <ToggleGroupItem
+              key={category}
+              value={category}
+              className={`
+                h-auto rounded-none border-0 shadow-none
+                text-[11px] xs:text-xs sm:text-sm
+                px-3 sm:px-5 py-2 whitespace-nowrap
+                transition-colors
 
-                    ${!isFirst ? "border-l border-primary" : ""}
+                ${!isFirst ? "border-l border-primary" : ""}
 
-                    ${
-                      isActive
-                        ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground relative z-10"
-                        : "bg-card text-primary hover:bg-primary hover:text-primary-foreground"
-                    }
+                data-[state=on]:bg-primary
+                data-[state=on]:text-primary-foreground
+                data-[state=on]:hover:bg-primary/90
 
-                    ${isFirst ? "rounded-l-full" : ""}
-                    ${isLast ? "rounded-r-full" : ""}
-                  `}
-                >
-                  {category}
-                </Button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+                text-primary hover:bg-primary hover:text-primary-foreground
+
+                ${isFirst ? "rounded-l-full" : ""}
+                ${isLast ? "rounded-r-full" : ""}
+              `}
+            >
+              {category}
+            </ToggleGroupItem>
+          );
+        })}
+      </ToggleGroup>
     </div>
   );
 };
