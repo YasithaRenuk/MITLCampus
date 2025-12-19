@@ -19,11 +19,10 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({
 
   const categories = [
     "All",
-    "Health & Nursing",
-    "Languages",
-    "Psychology & Education",
-    "Technology & Engineering",
-    "Bussiness Management",
+    "Campus Announcements",
+    "Academic Updates",
+    "Campus Events",
+    
   ];
 
   const handleChange = (value: string) => {

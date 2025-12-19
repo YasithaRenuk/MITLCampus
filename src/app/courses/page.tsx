@@ -147,7 +147,7 @@ export default function CoursesPage() {
     console.log("More details for:", courseTitle);
   };
 
-  // ✅ same grid as UI: 4 columns on desktop -> 12 per page (3 rows)
+  // 4 columns on desktop -> 12 per page (3 rows)
   const pageSize = 12;
   const totalPages = Math.max(1, Math.ceil(courses.length / pageSize));
 
