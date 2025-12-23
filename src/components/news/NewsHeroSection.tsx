@@ -20,7 +20,7 @@ export default function AboutHeroSection() {
         <div
           className="
             relative mx-auto max-w-7xl
-            px-4 pt-24 pb-20
+            px-4 pt-28 pb-20
             sm:pt-28
             md:px-6 md:pt-48 md:pb-16
           "
