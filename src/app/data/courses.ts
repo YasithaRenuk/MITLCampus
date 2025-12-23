@@ -4,6 +4,7 @@ export type lessonTopicsType = {
 }
 
 export type Course = {
+  id:number;
   title: string;
   type: string;
   image: string;
@@ -19,7 +20,6 @@ export type Categories = string[];
 export const categories:Categories = [
     "All",
     "Languages",
-    "Languages",
     "Psychology & Education",
     "Technology & Engineering",
     "Bussiness",
@@ -29,6 +29,7 @@ export const categories:Categories = [
 
 export const courses: Course[] = [
   { 
+    id:1,
     title: "Tamil Language Studies", 
     type: "Languages", 
     image: "/CoursesImages/TamilLanguage.png",
@@ -75,6 +76,7 @@ export const courses: Course[] = [
     ]
   },
   { 
+    id:2,
     title: "Business Management Studies", 
     type: "Bussiness", 
     image: "/CoursesImages/BusinessManagement.png",

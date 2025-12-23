@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -34,10 +35,11 @@ const Footer: React.FC = () => {
               Questions
             </span>
           </h2>
-
-          <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg">
-            Contact Us
-          </Button>
+          <Link href={"/courses"}>
+            <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
 
