@@ -12,17 +12,17 @@ export default function ContactLeft() {
         <InfoItem
           icon={<Phone size={20} />}
           title="Phone"
-          value="+9412 345 6789"
+          value="+9471 222 9922"
         />
         <InfoItem
           icon={<Mail size={20} />}
           title="Email"
-          value="booring@gmail.com"
+          value="infomitlcampus@gmail.com"
         />
         <InfoItem
           icon={<MapPin size={20} />}
           title="Address"
-          value="Boralesgamuwa, Sri Lanka"
+          value="No 1/440, Lake Road, Boralesgamuwa"
         />
       </div>
     </div>

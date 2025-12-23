@@ -12,6 +12,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatSection from "@/components/StatSection";
 import FAQSection from "@/components/FAQSection";
 import { courses } from "./data/courses";
+import { useRouter } from "next/navigation";
 
 const features = [
   {
@@ -62,6 +63,8 @@ const testimonials = [
 ];
 
 export default function Page() {
+  const router = useRouter();
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
@@ -74,8 +77,8 @@ export default function Page() {
       ? courses
       : courses.filter((course) => course.type === selectedCategory);
 
-  const handleMoreDetails = (courseTitle: string) => {
-    console.log("More details for:", courseTitle);
+  const handleMoreDetails = (courseId: number) => {
+    router.push(`/course/${courseId}`);
   };
 
   const nextTestimonial = () => {
@@ -134,7 +137,7 @@ export default function Page() {
             title={course.title}
             type={course.type}
             image={course.image}
-            onMoreDetails={() => handleMoreDetails(course.title)}
+            onMoreDetails={() => handleMoreDetails(course.id)}
           />
         ))}
       </div>

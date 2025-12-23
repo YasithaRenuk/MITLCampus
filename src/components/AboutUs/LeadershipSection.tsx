@@ -8,24 +8,24 @@ type Leader = {
 
 const leaders: Leader[] = [
   {
-    name: "Yasitha Renuka",
+    name: "Milinda N. Lamahewa",
     role: "Managing Director",
-    image: "/Leaders/Yasitha.png",
+    image: "/Leaders/Milinda.jpg",
   },
   {
-    name: "Maleesha Ilankoon",
-    role: "Managing Director",
-    image: "/Leaders/Maleesha.png",
-  },
-  {
-    name: "Sanoj Kumara",
+    name: "Former Prof. Dr. Lakshman Madurasinghe",
     role: "Senior Consultant",
-    image: "/Leaders/Sanoj.png",
+    image: "/Leaders/SeniorConsultant.jpg",
   },
   {
-    name: "Sonal Jayasinghe",
+    name: "R.M.P. BUDDINI SENAVIRATHNA RN,BSc (Hons),MN, Phd reading, Dip in ICU care, Dip in Psychology and Councelling",
     role: "Senior Consultant",
-    image: "/Leaders/Sonal.png",
+    image: "/Leaders/SeniorConsultant2.jpg",
+  },
+  {
+    name: "Prof. Chandima Wijebandara",
+    role: "Senior Consultant",
+    image: "/Leaders/SeniorConsultant3.jpg",
   },
 ];
 
