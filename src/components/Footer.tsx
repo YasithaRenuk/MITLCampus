@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight text-primary-foreground">
             <span>If You Have Any </span>
-            <span className="px-2 bg-card text-primary rounded-full sm:bg-transparent sm:text-primary">
+            <span className="px-2 bg-card text-primary rounded-full sm:bg-transparent sm:text-primary text-xl md:text-5xl">
               Questions
             </span>
           </h2>
-          <Link href={"/courses"}>
+          <Link href={"/contact"}>
             <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg">
               Contact Us
             </Button>
