@@ -70,11 +70,9 @@ export default function Page() {
   };
 
   const filteredCourses =
-  selectedCategory === "All"
-    ? courses
-    : courses.filter(
-        (course) => course.type === selectedCategory
-      );
+    selectedCategory === "All"
+      ? courses
+      : courses.filter((course) => course.type === selectedCategory);
 
   const handleMoreDetails = (courseTitle: string) => {
     console.log("More details for:", courseTitle);
@@ -92,11 +90,12 @@ export default function Page() {
 
   return (
     <div className="w-full">
-      {/* HERO – full width */}
+      {/* HERO */}
       <HeroSection />
 
-      <div className="mt-20"></div>
-      {/* FEATURE CARDS – pulled up to overlap hero */}
+      <div className="mt-20" />
+
+      {/* FEATURES */}
       <div className="max-w-6xl mx-auto -mt-60 grid grid-cols-1 md:grid-cols-3 gap-8 px-8 mb-16 relative z-20">
         {features.map((item, index) => (
           <FeatureCard
@@ -108,24 +107,26 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Courses section heading */}
+      {/* COURSES HEADER */}
       <div className="text-center mb-12">
         <p className="text-[#00A8E8] font-bold text-sm mb-2 tracking-wide">
           COURSES
         </p>
-        <h2 className="text-4xl font-bold text-gray-900">Academic Programs</h2>
+        <h2 className="text-4xl font-bold text-gray-900">
+          Academic Programs
+        </h2>
         <p className="text-gray-600 text-lg">
           Choose from our diverse range of undergraduate and graduate programs
           designed to prepare <br /> you for success.
         </p>
       </div>
 
-      {/* Category Tabs */}
+      {/* CATEGORY TABS */}
       <div className="max-w-7xl mx-auto px-8">
         <CategoryTabs onCategoryChange={handleCategoryChange} />
       </div>
 
-      {/* Course Cards */}
+      {/* COURSE CARDS */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 mb-16">
         {filteredCourses.map((course, index) => (
           <CourseCard
@@ -138,7 +139,7 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Testimonials Section */}
+      {/* TESTIMONIALS */}
       <div className="bg-gray-50 py-16 w-full">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-12">
@@ -154,21 +155,27 @@ export default function Page() {
           </div>
 
           <div className="relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            {/* 1 card mobile | 2 cards desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               {testimonials
                 .slice(currentTestimonial, currentTestimonial + 2)
                 .map((testimonial, index) => (
-                  <TestimonialCard
+                  <div
                     key={index}
-                    name={testimonial.name}
-                    course={testimonial.course}
-                    batch={testimonial.batch}
-                    testimonial={testimonial.testimonial}
-                    image={testimonial.image}
-                  />
+                    className={index === 1 ? "hidden md:block" : ""}
+                  >
+                    <TestimonialCard
+                      name={testimonial.name}
+                      course={testimonial.course}
+                      batch={testimonial.batch}
+                      testimonial={testimonial.testimonial}
+                      image={testimonial.image}
+                    />
+                  </div>
                 ))}
             </div>
 
+            {/* CONTROLS */}
             <div className="flex justify-end gap-4">
               <Button
                 onClick={prevTestimonial}
@@ -178,13 +185,14 @@ export default function Page() {
               >
                 <ChevronLeft className="w-5 h-5" />
               </Button>
+
               <Button
                 onClick={nextTestimonial}
                 variant="outline"
                 size="icon"
                 className="rounded-full w-12 h-12 border-gray-300 hover:border-[#00A8E8] hover:text-[#00A8E8]"
               >
-                  <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
           </div>
