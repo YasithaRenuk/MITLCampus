@@ -3,19 +3,26 @@ import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   return (
-    <section className="relative py-24 bg-transparent">
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section className="relative bg-transparent py-16 md:py-20 lg:py-24">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Left content */}
           <ContactLeft />
 
-          {/* Empty space on desktop so the absolute card can float */}
+          {/* Mobile: show form normally */}
+          <div className="block lg:hidden">
+            <ContactForm />
+          </div>
+
+          {/* Desktop spacer for floating form */}
           <div className="hidden lg:block" />
         </div>
       </div>
 
-      {/* Floating form */}
-      <ContactForm />
+      {/* Desktop floating form */}
+      <div className="hidden lg:block">
+        <ContactForm />
+      </div>
     </section>
   );
 }
