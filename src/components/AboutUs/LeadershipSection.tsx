@@ -57,13 +57,13 @@ export default function LeadershipSection() {
       className="rounded-2xl  "
     >
       {/* Image */}
-      <div className="relative h-[320px] w-full overflow-hidden rounded-xl bg-gray-100">
+      <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
         <Image
           src={p.image}
           alt={p.name}
           fill
           className="object-cover"
-          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 320px"
+          sizes="(max-width: 640px) 10vw, (max-width: 1024px) 45vw, 320px"
         />
       </div>
 
