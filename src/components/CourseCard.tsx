@@ -55,7 +55,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             </p>
           </div>
 
-          <button
+          {/* <button
             onClick={() => setIsFavorite(!isFavorite)}
             className="
               w-8 h-8 bg-white rounded-full 
@@ -69,7 +69,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                 isFavorite ? "fill-red-500 text-red-500" : "text-gray-400"
               }`}
             />
-          </button>
+          </button> */}
         </div>
 
         <div className="border border-[#00A8E8]" />

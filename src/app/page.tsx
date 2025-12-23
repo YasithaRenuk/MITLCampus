@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatSection from "@/components/StatSection";
 import FAQSection from "@/components/FAQSection";
+import { courses } from "./data/courses";
 
 const features = [
   {
@@ -30,49 +31,6 @@ const features = [
     description:
       "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me.I'm A Paragraph. Click Here To Add Your Own Text And Edit Me.",
     icon: "star",
-  },
-];
-
-const courses = [
-  {
-    title: "Japanese Language",
-    type: "Certificate Course",
-    image: "/japanese.png",
-  },
-  {
-    title: "Hospitality Management",
-    type: "Certificate Course",
-    image: "/hospitality.png",
-  },
-  {
-    title: "Information Technology",
-    type: "Certificate Course",
-    image: "/IT.png",
-  },
-  {
-    title: "English Language",
-    type: "Certificate Course",
-    image: "/English.png",
-  },
-  {
-    title: "Japanese Language",
-    type: "Certificate Course",
-    image: "/japanese.png",
-  },
-  {
-    title: "Hospitality Management",
-    type: "Certificate Course",
-    image: "/hospitality.png",
-  },
-  {
-    title: "Information Technology",
-    type: "Certificate Course",
-    image: "/IT.png",
-  },
-  {
-    title: "English Language",
-    type: "Certificate Course",
-    image: "/English.png",
   },
 ];
 
@@ -105,10 +63,18 @@ const testimonials = [
 
 export default function Page() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleCategoryChange = (category: string) => {
-    console.log("Selected category:", category);
+    setSelectedCategory(category);
   };
+
+  const filteredCourses =
+  selectedCategory === "All"
+    ? courses
+    : courses.filter(
+        (course) => course.type === selectedCategory
+      );
 
   const handleMoreDetails = (courseTitle: string) => {
     console.log("More details for:", courseTitle);
@@ -161,7 +127,7 @@ export default function Page() {
 
       {/* Course Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 mb-16">
-        {courses.map((course, index) => (
+        {filteredCourses.map((course, index) => (
           <CourseCard
             key={index}
             title={course.title}

@@ -5,6 +5,7 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/components/ui/toggle-group";
+import { categories } from "@/app/data/courses";
 
 interface CategoryTabsProps {
   onCategoryChange?: (category: string) => void;
@@ -16,15 +17,6 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({
   defaultCategory = "All",
 }) => {
   const [activeCategory, setActiveCategory] = useState(defaultCategory);
-
-  const categories = [
-    "All",
-    "Health & Nursing",
-    "Languages",
-    "Psychology & Education",
-    "Technology & Engineering",
-    "Bussiness Management",
-  ];
 
   const handleChange = (value: string) => {
     if (!value) return; // ToggleGroup can emit empty
