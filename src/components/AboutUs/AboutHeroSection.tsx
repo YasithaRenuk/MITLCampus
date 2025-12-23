@@ -65,16 +65,16 @@ export default function AboutHeroSection() {
                 </div>
 
                 {/* Foreground Text */}
-                <div className="relative z-10 text-center">
-                  <h2 className="text-6xl font-extrabold leading-[0.85] tracking-tight text-black md:text-8xl lg:text-8xl">
+                <div className="relative z-10 text-center px-3 sm:px-0">
+                  <h2 className="text-4xl sm:text-5xl md:text-8xl font-extrabold leading-[0.9] tracking-tight text-black">
                     Welcome To
                   </h2>
 
-                  <div className="mt-4 flex justify-center gap-x-6">
-                    <span className="text-6xl font-extrabold tracking-tight text-[oklch(0.7579_0.1614_71.2)] md:text-8xl lg:text-8xl">
+                  <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                    <span className="text-4xl sm:text-5xl md:text-8xl font-extrabold tracking-tight text-[oklch(0.7579_0.1614_71.2)]">
                       MITL
                     </span>
-                    <span className="text-6xl font-extrabold tracking-tight text-[oklch(0.6538_0.1593_243.47)] md:text-8xl lg:text-8xl">
+                    <span className="text-4xl sm:text-5xl md:text-8xl font-extrabold tracking-tight text-[oklch(0.6538_0.1593_243.47)]">
                       CAMPUS
                     </span>
                   </div>
