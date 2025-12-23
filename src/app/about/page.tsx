@@ -7,19 +7,25 @@ const features = [
   {
     title: "Vision",
     description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph.I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph. Click Here To Add Your Own Text And Edit Me.",
+      ["To be the leading global provider of professional education, empowering individuals and organizations to excel in their fields through innovative, practical, and accessible learning experiences."],
     icon: "flask",
   },
   {
     title: "Mission",
     description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph.I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph. Click Here To Add Your Own Text And Edit Me.",
+      [
+        "To provide high-quality, industry-relevant education and training programs that equip professionals with the skills and knowledge to thrive in a rapidly changing world.",
+        "To foster a lifelong learning culture by offering diverse learning opportunities, including certifications, courses, workshops, and webinars across various industries.",
+        "To bridge the gap between theory and practice by partnering with industry experts to deliver up-to-date, practical education that meets current market needs.",
+        "To empower learners at all stages of their careers—from entry-level professionals to executives—with tailored programs that support career growth and professional development.",
+        "To leverage technology and innovation in education, ensuring our programs are accessible, flexible, and relevant to today’s global workforce.",
+      ], 
     icon: "faculty",
   },
   {
     title: "Values",
     description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph.I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph. Click Here To Add Your Own Text And Edit Me.",
+      ["I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph.I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. I'm A Paragraph. Click Here To Add Your Own Text And Edit Me."],
     icon: "star",
   },
 ];

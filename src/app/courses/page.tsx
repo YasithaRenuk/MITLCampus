@@ -16,24 +16,26 @@ import {
 import { courses } from "../data/courses";
 import CourseCard from "@/components/CourseCard";
 import CategoryTabs from "@/components/CategoryTabs";
+import { useRouter } from "next/navigation";
 
 export default function CoursesPage() {
+  const router = useRouter();
+
   const [page, setPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    setPage(1); // reset page when category changes
+    setPage(1);
   };
 
-  const handleMoreDetails = (courseTitle: string) => {
-    console.log("More details for:", courseTitle);
+  const handleMoreDetails = (courseId: number) => {
+    router.push(`/course/${courseId}`);
   };
 
-  // 4 columns on desktop -> 12 per page (3 rows)
+
   const pageSize = 12;
 
-  // 1) Filter courses by selected category
   const filteredCourses = useMemo(() => {
     if (selectedCategory === "All") return courses;
 
@@ -41,10 +43,8 @@ export default function CoursesPage() {
 
   }, [selectedCategory]);
 
-  // 2) Total pages based on filtered list
   const totalPages = Math.max(1, Math.ceil(filteredCourses.length / pageSize));
 
-  // Ensure page stays valid when filtering reduces pages
   useEffect(() => {
     if (page > totalPages) setPage(totalPages);
   }, [page, totalPages]);
@@ -52,7 +52,6 @@ export default function CoursesPage() {
   const canPrev = page > 1;
   const canNext = page < totalPages;
 
-  // 3) Slice the filtered list for current page
   const pagedCourses = useMemo(() => {
     const start = (page - 1) * pageSize;
     return filteredCourses.slice(start, start + pageSize);
@@ -82,7 +81,7 @@ export default function CoursesPage() {
               title={course.title}
               type={course.type}
               image={course.image}
-              onMoreDetails={() => handleMoreDetails(course.title)}
+              onMoreDetails={() => handleMoreDetails(course.id)}
             />
           ))}
         </div>

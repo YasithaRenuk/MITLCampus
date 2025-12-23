@@ -11,7 +11,7 @@ const icons = {
 
 interface FeatureCardProps {
   title: string;
-  description: string;
+  description: string[];
   icon: string;
 }
 
@@ -52,7 +52,14 @@ export default function FeatureCard({
 
         {/* Description */}
         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-          {description}
+          {description.map((item,index)=>(
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <span className="font-bold">
+                {index+1}
+              </span>
+               {". "+item}
+            </p>
+          ))}
         </p>
       </CardContent>
     </Card>

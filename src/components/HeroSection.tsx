@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
@@ -33,23 +34,24 @@ const HeroSection: React.FC = () => {
             where innovation meets tradition. Join thousands of students
             shaping the future.
           </p>
-
-          <Button
-            className="
-              bg-primary text-primary-foreground 
-              hover:bg-primary/90 
-              px-8 py-6 
-              text-base sm:text-lg 
-              rounded-xl 
-              shadow-[0_18px_40px_rgba(0,0,0,0.18)]
-              transition-all duration-300 
-              hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] 
-              hover:scale-105
-            "
-          >
-            Explore Courses
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link href={"/courses"}>
+            <Button
+              className="
+                bg-primary text-primary-foreground 
+                hover:bg-primary/90 
+                px-8 py-6 
+                text-base sm:text-lg 
+                rounded-xl 
+                shadow-[0_18px_40px_rgba(0,0,0,0.18)]
+                transition-all duration-300 
+                hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] 
+                hover:scale-105
+              "
+            >
+              Explore Courses
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
 

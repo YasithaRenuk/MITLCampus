@@ -15,81 +15,78 @@ import {
   PaginationEllipsis,
 } from "@/components/ui/pagination";
 
-type NewsCategory = "Campus Events" | "Academic Update" | "Announcement";
+import { news } from "../data/news";
 
-const news = [
-  {
-    image: "/news/1.png",
-    category: "Campus Events" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  {
-    image: "/news/2.png",
-    category: "Academic Update" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  {
-    image: "/news/3.png",
-    category: "Announcement" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  {
-    image: "/news/4.png",
-    category: "Campus Events" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  {
-    image: "/news/5.png",
-    category: "Academic Update" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  {
-    image: "/news/6.png",
-    category: "Announcement" as NewsCategory,
-    title: "New Scholarship Programs For Engineering Students",
-    description:
-      "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It’s Easy. Just Click “Edit Text”…",
-    published: "November 23, 2025",
-  },
-  // add more items here if you want more pages...
-];
+type PageToken = number | "...";
+
+function buildPagination(current: number, total: number): PageToken[] {
+  // Matches common UI: 1 2 3 ... 8 9 10 (and similar)
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+
+  const pages: PageToken[] = [];
+
+  const showLeft = current <= 4;
+  const showRight = current >= total - 3;
+
+  // Always show first page
+  pages.push(1);
+
+  if (showLeft) {
+    // 1 2 3 4 5 ... last
+    pages.push(2, 3, 4, 5, "...", total);
+    return pages;
+  }
+
+  if (showRight) {
+    // 1 ... last-4 last-3 last-2 last-1 last
+    pages.push("...", total - 4, total - 3, total - 2, total - 1, total);
+    return pages;
+  }
+
+  // Middle: 1 ... (current-1) current (current+1) ... last
+  pages.push("...", current - 1, current, current + 1, "...", total);
+  return pages;
+}
 
 export default function NewsPage() {
   const [page, setPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const pageSize = 6;
+
+  const filteredNews = useMemo(() => {
+    if (!selectedCategory || selectedCategory === "All") return news;
+    return news.filter((n) => n.category === selectedCategory);
+  }, [selectedCategory]);
+
+  const totalPages = useMemo(
+    () => Math.max(1, Math.ceil(filteredNews.length / pageSize)),
+    [filteredNews.length]
+  );
+
+  // keep page valid if filters reduce total pages
+  const safePage = Math.min(page, totalPages);
+
+  const pagedNews = useMemo(() => {
+    const start = (safePage - 1) * pageSize;
+    return filteredNews.slice(start, start + pageSize);
+  }, [filteredNews, safePage]);
+
+  const pagesToRender = useMemo(
+    () => buildPagination(safePage, totalPages),
+    [safePage, totalPages]
+  );
+
+  const canPrev = safePage > 1;
+  const canNext = safePage < totalPages;
+
+  const goTo = (p: number) => setPage(Math.min(totalPages, Math.max(1, p)));
 
   const handleCategoryChange = (category: string) => {
     console.log("Selected category:", category);
+    setSelectedCategory(category);
     setPage(1);
   };
-
-  //  3 columns x 2 rows = 6 per page (desktop)
-  const pageSize = 6;
-  const totalPages = Math.max(1, Math.ceil(news.length / pageSize));
-
-  const pagedNews = useMemo(() => {
-    const start = (page - 1) * pageSize;
-    return news.slice(start, start + pageSize);
-  }, [page]);
-
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-
-  const goTo = (p: number) => setPage(Math.min(totalPages, Math.max(1, p)));
 
   return (
     <main className="min-h-screen bg-white">
@@ -99,7 +96,6 @@ export default function NewsPage() {
         <CategoryTabs onCategoryChange={handleCategoryChange} />
       </div>
 
-      {/* 3 per row on desktop */}
       <div className="mx-auto max-w-7xl px-8 pb-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {pagedNews.map((item, idx) => (
@@ -115,34 +111,64 @@ export default function NewsPage() {
           ))}
         </div>
 
-        {/* Pagination (shadcn) */}
-  <Pagination className="mt-12">
-  <PaginationContent>
-    <PaginationItem>
-      <button className="h-9 w-9 rounded-md hover:bg-muted flex items-center justify-center">
-        <ChevronLeft className="h-4 w-4" />
-      </button>
-    </PaginationItem>
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <Pagination className="mt-12">
+            <PaginationContent>
+              {/* Prev */}
+              <PaginationItem>
+                <button
+                  type="button"
+                  onClick={() => canPrev && goTo(safePage - 1)}
+                  disabled={!canPrev}
+                  className="h-9 w-9 rounded-md hover:bg-muted flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none"
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+              </PaginationItem>
 
-    <PaginationItem>
-      <PaginationLink href="#" isActive>1</PaginationLink>
-    </PaginationItem>
+              {/* Page numbers */}
+              {pagesToRender.map((p, i) => {
+                if (p === "...") {
+                  return (
+                    <PaginationItem key={`ellipsis-${i}`}>
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                  );
+                }
 
-    <PaginationItem>
-      <PaginationLink href="#">2</PaginationLink>
-    </PaginationItem>
+                return (
+                  <PaginationItem key={`page-${p}`}>
+                    <PaginationLink
+                      href="#"
+                      isActive={p === safePage}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        goTo(p);
+                      }}
+                    >
+                      {p}
+                    </PaginationLink>
+                  </PaginationItem>
+                );
+              })}
 
-    <PaginationItem>
-      <PaginationEllipsis />
-    </PaginationItem>
-
-    <PaginationItem>
-      <button className="h-9 w-9 rounded-md hover:bg-muted flex items-center justify-center">
-        <ChevronRight className="h-4 w-4" />
-      </button>
-    </PaginationItem>
-  </PaginationContent>
-</Pagination>
+              {/* Next */}
+              <PaginationItem>
+                <button
+                  type="button"
+                  onClick={() => canNext && goTo(safePage + 1)}
+                  disabled={!canNext}
+                  className="h-9 w-9 rounded-md hover:bg-muted flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none"
+                  aria-label="Next page"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
       </div>
     </main>
   );
