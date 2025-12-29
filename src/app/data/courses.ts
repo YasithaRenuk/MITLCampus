@@ -23,7 +23,9 @@ export const categories:Categories = [
     "Psychology & Education",
     "Technology & Engineering",
     "Bussiness",
-    "Certificate Course"
+    "Pharmacology & Helth",
+    "Cosmetology",
+    "Teaching"
 ];
 
 
@@ -236,7 +238,7 @@ export const courses: Course[] = [
   { 
     id:4,
     title: "Counselling and Psychology Studies", 
-    type: "Psychology", 
+    type: "Psychology & Education", 
     image: "/CoursesImages/CounsellingandPsychology.jpg",
     description:'The Counselling and Psychology Studies program at MITL Campus is one of the most respected and impactful academic offerings in Sri Lanka. Introduced eight years ago, this course provides students and professionals with comprehensive training in understanding human behavior, mental health, and therapeutic practices. MITL Campus is known for its academic integrity and dedication to holistic education. Its Psychology and Counselling program is a leading choice for individuals seeking careers in mental health services, education, social work, rehabilitation, and related human services fields. As awareness of mental health grows globally and locally, the demand for trained professionals in counselling and psychology continues to rise. While various institutions offer psychology courses, MITL Campus stands out for its in-depth curriculum, focus on ethical practice, and experienced faculty. The Counselling and Psychology Department at MITL Campus is committed to offering an inclusive, research-informed, and practice-oriented education to support the psychological well-being and development of individuals and communities.',
     mainFeatures : [
@@ -313,7 +315,7 @@ export const courses: Course[] = [
   { 
     id:5,
     title: "Pharmacology", 
-    type: "Psychology", 
+    type: "Pharmacology & Helth", 
     image: "/CoursesImages/Pharmacology.jpg",
     description:' The Pharmacology Studies program at MITL Campus is one of the most respected and professionally aligned academic courses available in Sri Lanka. Introduced eight years ago, this program provides students and healthcare professionals with comprehensive knowledge of drug actions, interactions, and applications within clinical and research settings. MITL Campus is recognized for its high academic standards and commitment to excellence in scientific education. Its Pharmacology program is a preferred choice for those pursuing careers in medicine, pharmacy, clinical research, drug development, or public health. With the rapid growth of the healthcare and pharmaceutical sectors globally, the demand for professionals trained in pharmacology is steadily rising. While other institutions offer pharmacology courses, MITL Campus distinguishes itself through its research-based curriculum, laboratory training, and experienced faculty. The Department of Pharmacology at MITL Campus is dedicated to producing skilled graduates who contribute to advancing safe and effective medication use, drug discovery, and medical education.',
     mainFeatures : [
@@ -390,7 +392,7 @@ export const courses: Course[] = [
   { 
     id:6,
     title: "Nursing", 
-    type: "Psychology", 
+    type: "Pharmacology & Helth", 
     image: "/CoursesImages/Nursing.jpg",
     description:'The Nursing Studies program at MITL Campus is one of the most trusted and essential healthcare education programs in Sri Lanka. Established eight years ago, this course equips students and professionals with the knowledge, skills, and compassion required to provide quality patient care across various clinical settings. MITL Campus is known for its academic rigor and commitment to practical healthcare training. Its Nursing program is a top choice for individuals pursuing careers in hospitals, community health, eldercare, and international healthcare environments. As the healthcare sector continues to expand globally, the demand for skilled and certified nurses is rising rapidly. While several institutions offer nursing courses, MITL Campus stands out due to its balanced curriculum, clinical partnerships, and focus on both theoretical knowledge and hands-on training. The Department of Nursing at MITL Campus strives to produce competent, ethical, and empathetic nursing professionals capable of responding to the evolving challenges of global health care.',
     mainFeatures : [
@@ -467,7 +469,7 @@ export const courses: Course[] = [
   { 
     id:7,
     title: "Care Giving", 
-    type: "Psychology", 
+    type: "Pharmacology & Helth", 
     image: "/CoursesImages/CareGiving.jpg",
     description:'The Caregiving Studies program at MITL Campus is a highly valued and compassionate educational offering designed to train individuals in the essential skills needed for providing quality personal and health-related care. Established eight years ago, this program prepares students for meaningful careers in home care, elder care, disability support, and healthcare assistance. MITL Campus is recognized for its practical, community-centered approach and emphasis on human dignity, empathy, and professionalism. Its Caregiving program has become a preferred option for those seeking to work in both local and international caregiving environments. As populations age and healthcare systems evolve, the global demand for well-trained caregivers is rising steadily. While various institutions offer caregiving programs, MITL Campus stands out for its hands-on training, ethical focus, and comprehensive support structure. The Department of Caregiving at MITL Campus is committed to developing individuals who are not only technically skilled but also emotionally intelligent and capable of delivering high-quality personal care services.',
     mainFeatures : [
@@ -540,7 +542,7 @@ export const courses: Course[] = [
   { 
     id:8,
     title: "Marketing Management", 
-    type: "Psychology", 
+    type: "Bussiness", 
     image: "/CoursesImages/MarketingManagement.jpg",
     description:'The Marketing Management program at MITL Campus is one of the most dynamic and career-oriented business programs in Sri Lanka. Established eight years ago, this course equips students with the strategic, analytical, and creative skills required to excel in modern marketing environments—both locally and internationally. Known for academic excellence and practical relevance, MITL Campus has developed a Marketing Management curriculum that prepares learners to navigate today’s digital landscape, customer-focused strategies, and brand-driven industries. With marketing roles evolving rapidly due to digital transformation and global competition, professionals with up-to-date marketing knowledge are increasingly in demand. MITL Campus distinguishes itself through its industry-aligned syllabus, experienced faculty, and strong academic partnerships. The Department of Marketing at MITL Campus is committed to developing skilled professionals who can drive business growth, manage brand value, and lead market innovations in diverse sectors.',
     mainFeatures : [
@@ -617,7 +619,7 @@ export const courses: Course[] = [
   { 
     id:9,
     title: "Cosmetology", 
-    type: "Psychology", 
+    type: "Cosmetology", 
     image: "/CoursesImages/Cosmetology.jpg",
     description:' The Cosmetology Studies program at MITL Campus is a sought-after vocational training course designed for individuals passionate about beauty, wellness, and personal care. Launched eight years ago, the program offers a well-rounded curriculum that equips students with the skills needed to pursue successful careers in the beauty industry—locally and globally. Renowned for its commitment to practical excellence and creativity, MITL Campus has developed a Cosmetology program that blends traditional beauty practices with modern techniques and technologies. It stands out for its industry-aligned training, qualified instructors, and international certification. As beauty and wellness industries expand across the world, professionally trained cosmetologists are in increasing demand. MITL Campus is proud to contribute to this field by offering a program that prepares learners for careers in salons, spas, media, fashion, healthcare, and entrepreneurship. The Cosmetology Department at MITL Campus is dedicated to developing professionals who are skilled, confident, and ready to make a positive impact in the personal care sector.',
     mainFeatures : [
@@ -692,7 +694,7 @@ export const courses: Course[] = [
   { 
     id:10,
     title: "Hospitality Management", 
-    type: "Psychology", 
+    type: "Pharmacology & Helth", 
     image: "/CoursesImages/HospitalityManagement.jpg",
     description:'The Hospitality Management program offered by MITL Campus is one of the most career-focused and respected vocational training programs in Sri Lanka. Established eight years ago, this course provides students and working professionals with the practical knowledge and management skills necessary to thrive in the global hospitality industry. Recognized for academic excellence and hands-on training, MITL Campus equips learners with competencies in customer service, operations, event planning, and tourism management. The program is ideal for those aspiring to work in hotels, resorts, restaurants, travel companies, and event management. In today’s interconnected world, the demand for skilled hospitality professionals is on the rise. MITL Campus stands out due to its strong industry links, qualified faculty, and internationally recognized curriculum that blends operational skills with leadership development. The Hospitality Management Department is committed to nurturing talent and preparing graduates to meet the evolving needs of the service sector in both local and international markets.',
     mainFeatures : [
@@ -769,7 +771,7 @@ export const courses: Course[] = [
   { 
     id:11,
     title: "Pre School & Primary Teaching", 
-    type: "Psychology", 
+    type: "Teaching", 
     image: "/CoursesImages/PreSchool&PrimaryTeaching.jpg",
     description:'The Pre-School and Primary Teaching program at MITL Campus is one of the most respected and well-established teacher training courses in Sri Lanka. Introduced eight years ago, the program equips aspiring educators with the knowledge, skills, and confidence to teach and nurture young children during their most formative years. MITL Campus is committed to developing qualified early childhood educators who are prepared to support the cognitive, emotional, and social development of children. With a strong focus on pedagogy, child psychology, and creative learning, the program combines theory with hands-on practice in real classroom environments. As demand for high-quality early childhood education continues to grow globally, this program serves as a foundation for learners who wish to build meaningful careers in education—whether in Sri Lanka or abroad. The Department of Early Childhood and Primary Education at MITL Campus ensures that graduates are not only competent teachers but also caring mentors, dedicated to the holistic development of children.',
     mainFeatures : [
@@ -846,7 +848,7 @@ export const courses: Course[] = [
   { 
     id:12,
     title: "Information Technology", 
-    type: "Psychology", 
+    type: "Technology & Engineering", 
     image: "/CoursesImages/InformationTechnology.jpg",
     description:' The Information Technology (IT) program at MITL Campus is a highly sought-after academic and professional training course in Sri Lanka. Launched eight years ago, this program is designed to meet the growing demand for skilled IT professionals in local and global markets. MITL Campus offers a robust curriculum that blends foundational knowledge with hands-on training in software development, networking, cybersecurity, data analysis, and digital innovation. Whether learners are preparing for careers in programming, system administration, or IT project management, this course provides them with the tools and certifications to succeed. In an era where technology drives every industry, MITL Campus stands out for its quality education, industry-relevant teaching, and globally recognized certification. It is ideal for students, career changers, and working professionals looking to upgrade their tech skills. With the rapid pace of digital transformation, the Department of Information Technology at MITL Campus ensures learners are prepared for the challenges and opportunities of the digital economy.',
     mainFeatures : [
@@ -924,7 +926,7 @@ export const courses: Course[] = [
   { 
     id:13,
     title: "Software Engineering", 
-    type: "Psychology", 
+    type: "Technology & Engineering", 
     image: "/CoursesImages/SoftwareEngineering.jpg",
     description:'The Software Engineering program at MITL Campus is a premier academic and professional course designed to meet the evolving demands of the global technology industry. Launched eight years ago, this program focuses on equipping students with the knowledge and practical skills needed to design, develop, and manage high-quality software systems. MITL Campus provides a future-focused curriculum that combines core principles of computer science with engineering best practices, ensuring graduates are job-ready and capable of addressing real-world challenges in software development. Students benefit from hands-on project work, exposure to industry-standard tools, and mentorship from experienced professionals. As digital transformation accelerates, software engineers are in high demand across all sectors—from startups to multinational corporations. This program prepares students to become proficient coders, critical thinkers, and innovative problem solvers. The Department of Software Engineering at MITL Campus emphasizes academic excellence, creativity, and professional ethics, ensuring learners are equipped for success in a rapidly changing digital world.',
     mainFeatures : [
@@ -1001,7 +1003,7 @@ export const courses: Course[] = [
   { 
     id:14,
     title: "Japanese Language", 
-    type: "Psychology", 
+    type: "Languages", 
     image: "/CoursesImages/Japanese .png",
     description:'  The Japanese Language Studies program offered by MITL Campus is one of the most recognized and in-demand language programs in Sri Lanka. Established eight years ago, this course is designed for students and professionals who wish to master the Japanese language for academic advancement, career development, or personal enrichment. As Japan continues to play a key role in the global economy and as Sri Lanka-Japan ties deepen across education, employment, and cultural exchange, the need for Japanese language proficiency is rapidly increasing. MITL Campus has established itself as a leader in language education, offering a carefully structured program that ensures fluency, cultural understanding, and professional applicability. This program is ideal for those seeking opportunities in international business, higher education, translation, tourism, and employment in Japan. With expert instruction and a globally respected certification, MITL Campus is committed to helping learners excel in their Japanese language journey.',
     mainFeatures : [
@@ -1032,7 +1034,7 @@ export const courses: Course[] = [
   { 
     id:15,
     title: "Korean Language", 
-    type: "Psychology", 
+    type: "Languages", 
     image: "/CoursesImages/Korean.png",
     description:' The Korean Language Studies program at MITL Campus is a well-established and highly sought-after course for students and professionals who aspire to master the Korean language. Running successfully for the past eight years, this program offers a gateway to Korean culture, education, and employment opportunities, both locally and internationally. As South Korea’s influence in global technology, entertainment, and education continues to grow, the demand for Korean language proficiency has surged. MITL Campus meets this need with a professionally designed curriculum, expert instruction, and strong academic guidance that equips learners for academic, personal, and career-related success. Whether your goal is to work in Korea, engage with K-pop and K-drama culture, pursue higher education, or simply communicate fluently, the Korean Language program at MITL Campus provides a solid and immersive learning experience.',
     mainFeatures : [
@@ -1063,7 +1065,7 @@ export const courses: Course[] = [
   { 
     id:16,
     title: "English Language", 
-    type: "Psychology", 
+    type: "Languages", 
     image: "/CoursesImages/English.png",
     description:'The English Language Studies program at MITL Campus is one of the most respected and widely enrolled language programs in Sri Lanka. Introduced eight years ago, the course is designed to help students and professionals build a strong command of English for academic, career, and personal growth. As English continues to be the global language of communication, business, science, and education, fluency in English opens the door to countless opportunities. MITL Campus offers a high-quality learning experience, with a curriculum tailored to meet international standards and learner needs across all proficiency levels. The program equips learners with practical and professional language skills, preparing them for further study, international work environments, and confident communication in real world contexts.',
     mainFeatures : [
