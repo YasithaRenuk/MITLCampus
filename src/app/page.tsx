@@ -39,7 +39,6 @@ const testimonials = [
   {
     name: "Thishakya Gayani Fernando",
     course: "Business Management",
-    batch: "2023",
     testimonial:
       "Throughout my years of being here. I’ve learnt so much more than I thought. Not only academic wise, but life wise. I’ve learnt how to be a role model in the field I am working, how to navigate the amount of personalities I’ll encounter, and so much more than I can’t express. As a student of MITL Campus I feel so much more confident in the skills I have, and how to be evermore confident in myself.",
     image: " ",
@@ -47,7 +46,6 @@ const testimonials = [
   {
     name: "Sinnaiya Jeewani",
     course: "Diploma in Health and Social Care",
-    batch: "2023",
     testimonial:
       "As a Tamil speaking student I have never thought I will be able to study in my mother tongue to enter to field of health with proper professional education. But the Tamil language Health and Social care program offered by MITL campus changed my entire life. Now I am a proud health care worker in Canada thankful to MITL Campus.",
     image: " ",
@@ -55,15 +53,12 @@ const testimonials = [
   {
     name: "Gayeshika Dinethi Karunarathne",
     course: "Nursing Graduate",
-    batch: "2023",
     testimonial:
       "As a professional nurse in government sector my education is only limited to the nursing diploma I have completed with NTS. For my luck I got to know about MITL Campus through many recommendations and enrolled with BSc program of Nursing offered by MITL Campus. I would say this is the turning point of my life. The BSc helped me for career development as well as open plethora of opportunities locally and internationally. Thank you MITL campus for the guidance, encouragement and endless support offer for myself as well as our batch…. ",
     image: " ",
   },
   {
     name: "Mr. and Mrs Widanapathirana",
-    course: " ",
-    batch: "2023",
     testimonial:
       "I and my wife’s life dream is to migrate to a European country. The biggest challenge for us to get through language examinations and learn a new demanding skill before migrate. The IELTS preparation course offered by MITL helped me immense to get my desired score and my wife’s. Not only that, because we follow their Diploma in Caregiving course and get trained in their skill lab we have gained so much of hand on experience before we move to UK. If you are looking for all solutions under one roof… MITL Campus is the place to visit…",
     image: " ",
@@ -71,7 +66,6 @@ const testimonials = [
   {
     name: "Kaushalya Jayanethth",
     course: "Japanese Language Course",
-    batch: "2023",
     testimonial:
       "I was stucked with my JLPT and JFT examinations for a long time. This stopped me lodging my visa to Japan Immigration which was so frustrating… I would say the Japanese Language course conducted by MITL campus is the golden key for me to get though my JLPT and JFT Exams. The unique teaching techniques they uses, individual attention helped me to clear lot of my doubts. Because they provide all class recordings it help me to self-study when needed. Arigato MITL staff and sensei for all…. ",
     image: " ",
@@ -175,20 +169,18 @@ export default function Page() {
 
           <div className="relative">
             {/* 1 card mobile | 2 cards desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-stretch">
               {testimonials
                 .slice(currentTestimonial, currentTestimonial + 2)
                 .map((testimonial, index) => (
                   <div
-                    key={index}
-                    className={index === 1 ? "hidden md:block" : ""}
+                    key={`${testimonial.name}-${index}`}
+                    className={index === 1 ? "hidden md:block h-full" : "h-full"}
                   >
                     <TestimonialCard
                       name={testimonial.name}
                       course={testimonial.course}
-                      batch={testimonial.batch}
                       testimonial={testimonial.testimonial}
-                      image={testimonial.image}
                     />
                   </div>
                 ))}
