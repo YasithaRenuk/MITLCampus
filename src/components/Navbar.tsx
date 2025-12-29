@@ -70,9 +70,21 @@ export default function Navbar() {
 
         {/* Desktop Apply Button */}
         <div className="hidden md:block">
-          <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold">
-            Apply Now
-          </Button>
+          <Link href={"https://docs.google.com/forms/d/e/1FAIpQLScvN4MYnReqQ0TjCIfQd933OhQ8o_vrvix0sLbsNSDpKPQUQw/viewform"} target="_blank">
+            <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold mr-5">
+              Sudent Registration Form
+            </Button>
+          </Link>
+          <Link href={"https://everify.lk/"} target="_blank">
+            <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold mr-5">
+              Certificate Verification
+            </Button>
+          </Link>
+          <Link href={"/login"}>
+            <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold">
+              Login
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -115,9 +127,28 @@ export default function Navbar() {
             );
           })}
 
-          <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground w-full rounded-xl py-3 text-sm font-semibold">
-            Apply Now
-          </Button>
+          <div className="flex flex-col gap-5">
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLScvN4MYnReqQ0TjCIfQd933OhQ8o_vrvix0sLbsNSDpKPQUQw/viewform"
+              target="_blank"
+            >
+              <Button className="w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold">
+                Student Registration Form
+              </Button>
+            </Link>
+
+            <Link href="https://everify.lk/" target="_blank">
+              <Button className="w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold">
+                Certificate Verification
+              </Button>
+            </Link>
+
+            <Link href="/login">
+              <Button className="w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 rounded-xl text-sm font-semibold">
+                Login
+              </Button>
+            </Link>
+          </div>
         </div>
       )}
     </nav>
