@@ -18,14 +18,14 @@ export default function ContactForm() {
     >
       <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
         {/* Heading */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+        <h3 className="text-2xl font-bold text-gray-900 mb-11">
           Send Us A Message
         </h3>
 
-        <p className="text-gray-500 text-sm mb-8 max-w-md">
+        {/* <p className="text-gray-500 text-sm mb-8 max-w-md">
           I'm a Paragraph. Click Here To Add Your Own Text And Edit Me.
           It's Easy. Just Click “Edit Text” Or Double Click Me
-        </p>
+        </p> */}
 
         <form className="space-y-5">
           {/* Name & Email */}

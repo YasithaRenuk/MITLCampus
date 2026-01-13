@@ -3,10 +3,10 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export default function ContactLeft() {
   return (
     <div className="max-w-md">
-      <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-      <p className="text-gray-600 mb-8">
+      <h2 className="text-3xl font-bold mb-12">Get In Touch</h2>
+      {/* <p className="text-gray-600 mb-8">
         I'm a paragraph. Click here to add your own text and edit me.
-      </p>
+      </p> */}
 
       <div className="space-y-6">
         <InfoItem
