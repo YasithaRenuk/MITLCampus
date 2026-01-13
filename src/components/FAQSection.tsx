@@ -16,27 +16,27 @@ const FAQSection: React.FC = () => {
     {
       question: "What Services Does MILT Campus Offer?",
       answer:
-        "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It's Easy. Just Click Or Double Click Me To Add Your Own Content And Make Changes To The Font.",
+        "We offer certificate, diploma, HND, Bachelor and Masters qualifications in many fields. We also offer skill training for nursing, care giving and pre school teaching students.Apart from that under MITL language school we offer language course for all demanding languages.",
     },
     {
-      question: "What Services Does MILT Campus Offer?",
+      question: "Can i complete University Great Commission (UGC) recognized qualifications through MITL Campus?",
       answer:
-        "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It's Easy. Just Click Or Double Click Me To Add Your Own Content And Make Changes To The Font.",
+        "Yes, most definitely. All the universities we are affiliated with are UGC recognized and members of International Association of Universities (IAU). Therefore, if you complicated any professional education course with MITL campus you will be able to get UGC recognized international qualification with attending to an official convocation ceremony.",
     },
     {
-      question: "How Do You Measure Success?",
+      question: "Do you offer online qualification verification ?",
       answer:
-        "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It's Easy. Just Click Or Double Click Me To Add Your Own Content And Make Changes To The Font.",
+        `Yes, all the certificates we offer at MITL Campus offered with online verification via one of the worlds leading verification platform "Everify.lk". If you present our certificate to any local or international institution, they can verify your qualification via Everify.lk with your personal details.`,
     },
     {
-      question: "How Do You Measure Success?",
+      question: "What are the language classes conduct by MITL Campus ?",
       answer:
-        "I'm A Paragraph. Click Here To Add Your Own Text And Edit Your Own Content And Make Changes To The Font.",
+        "If you loooking any language under one roof MITL Campus is the only option. We conduct Japanese, Chinese, Hebrew, Arabic, German , Korian, Hindi, Italian, French, Danish, Rumanian, English and Tamil classes under our language school.",
     },
     {
-      question: "How Do I Get Started With MILTS Campus?",
+      question: "Can i attend for a graduation if i completed a qualification with MITL Campus ?",
       answer:
-        "I'm A Paragraph. Click Here To Add Your Own Text And Edit Me. It's Easy. Just Click Or Double Click Me To Add Your Own Content And Make Changes To The Font.",
+        "Yes, we are conducting 3 graduation convocation ceremonies at BMICH for MITL students. Apart from that, if you complete a university qualification via one of our affiliated university, you can attend for official university convocation ceremony in Sri Lanka too.",
     },
   ];
 
