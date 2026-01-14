@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               Questions
             </span>
           </h2>
-          <Link href={"/contact"}>
+          <Link href={"/contact-us"}>
             <Button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg">
               Contact Us
             </Button>
@@ -60,7 +60,6 @@ const Footer: React.FC = () => {
       {/* Main Footer */}
       <div className="relative z-20 bg-primary pt-8 sm:pt-12 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-
           {/* Social Media */}
           <div className="flex flex-col items-center mb-8 sm:mb-12">
             <h3 className="text-primary-foreground text-lg sm:text-xl font-semibold mb-4 sm:mb-6">
@@ -68,13 +67,21 @@ const Footer: React.FC = () => {
             </h3>
 
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+              {[
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/p/MITL-Campus-100064133285298/",
+                },
+                // { icon: Twitter, href: "" },
+                // { icon: Instagram, href: "" },
+                // { icon: Linkedin, href: "" },
+              ].map((item, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={item.href}
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-card flex items-center justify-center hover:bg-muted transition-colors"
                 >
-                  <Icon className="w-5 h-5 text-primary" />
+                  <item.icon className="w-5 h-5 text-primary" />
                 </a>
               ))}
             </div>
@@ -84,7 +91,6 @@ const Footer: React.FC = () => {
 
           {/* Footer Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-
             {/* Logo */}
             <div className="flex justify-center lg:justify-start">
               <div className="bg-card rounded-lg p-4 shadow-lg relative overflow-hidden w-full max-w-[260px]">
@@ -102,15 +108,22 @@ const Footer: React.FC = () => {
                 QUICK NAVIGATION
               </h4>
               <ul className="space-y-3">
-                {["Home", "About Us", "Contact Us", "Courses", "News", "Register"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a className="text-primary-foreground hover:text-accent-foreground transition-colors text-xs sm:text-sm">
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {[
+                  { name: "Home", href: "/" },
+                  { name: "Courses", href: "/courses" },
+                  { name: "News", href: "/news" },
+                  { name: "About Us", href: "/about-us" },
+                  { name: "Contact Us", href: "/contact-us" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <a
+                      className="text-primary-foreground hover:text-accent-foreground transition-colors text-xs sm:text-sm"
+                      href={item.href}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -120,9 +133,9 @@ const Footer: React.FC = () => {
                 CONTACT DETAILS
               </h4>
               <ul className="space-y-3 text-primary-foreground text-xs sm:text-sm">
-                <li>Tel: (+94) 035-2246013</li>
-                <li>boaring@gmail.com</li>
-                <li>Boralesgamuwa, Sri Lanka.</li>
+                <li>+9471 222 9922</li>
+                <li>infomitlcampus@gmail.com</li>
+                <li>No 1/440, Lake Road, Boralesgamuwa</li>
               </ul>
             </div>
 
@@ -152,7 +165,6 @@ const Footer: React.FC = () => {
                 </Button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
