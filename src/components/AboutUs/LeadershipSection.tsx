@@ -14,7 +14,7 @@ const leaders: Leader[] = [
   },
   {
     name: "Former Prof. Dr. Lakshman Madurasinghe",
-    role: "Senior Consultant",
+    role: "Senior Adviser",
     image: "/Leaders/SeniorConsultant.jpg",
   },
   {
@@ -24,7 +24,7 @@ const leaders: Leader[] = [
   },
   {
     name: "Prof. Chandima Wijebandara",
-    role: "Senior Consultant",
+    role: "Former Adviser",
     image: "/Leaders/SeniorConsultant3.jpg",
   },
 ];
