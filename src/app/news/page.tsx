@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/pagination";
 
 import { news } from "../data/news";
+import { useRouter } from "next/navigation";
 
 type PageToken = number | "...";
 
@@ -52,6 +53,7 @@ export default function NewsPage() {
   const [page, setPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
+  const router = useRouter();
   const pageSize = 6;
 
   const filteredNews = useMemo(() => {
@@ -88,6 +90,9 @@ export default function NewsPage() {
     setPage(1);
   };
 
+  const handleMoreDetails = (NewsId: number) => {
+    router.push(`/New/${NewsId}`);
+  };
   return (
     <main className="min-h-screen bg-white">
       <NewsHeroSection />
@@ -99,15 +104,17 @@ export default function NewsPage() {
       <div className="mx-auto max-w-7xl px-8 pb-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {pagedNews.map((item, idx) => (
-            <NewsCard
-              key={`${item.title}-${idx}`}
-              image={item.image}
-              category={item.category}
-              title={item.title}
-              description={item.description}
-              published={item.published}
-              onReadMore={() => console.log("Read more:", item.title)}
-            />
+            <div onClick={()=>handleMoreDetails(item.id)}>
+              <NewsCard
+                key={`${item.title}-${idx}`}
+                image={item.image}
+                category={item.category}
+                title={item.title}
+                description={item.description}
+                published={item.published}
+                onReadMore={() => handleMoreDetails(item.id)}
+              />
+            </div>
           ))}
         </div>
 
