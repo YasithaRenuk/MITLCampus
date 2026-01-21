@@ -26,8 +26,8 @@ const StatSection: React.FC<StatsProps> = ({ stats }) => {
   const defaultStats = [
     { label: "Student Teacher Ratio", value: "15:1" },
     { label: "Job Placement", value: "95%" },
-    { label: "Graduate Students", value: "1M" },
-    { label: "Degree Transfer", value: "100K" },
+    { label: "Graduate Students", value: "100k" },
+    { label: "Degree Transfer", value: "40K" },
   ];
 
   const statsToDisplay = stats || defaultStats;

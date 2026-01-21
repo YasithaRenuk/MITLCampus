@@ -24,10 +24,15 @@ const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div className="max-w-3xl mt-[120px] text-primary-foreground">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-secondary">MITL</span>{" "}
-            <span className="text-primary">CAMPUS</span>
-          </h1>
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold  leading-tight">
+              <span className="text-secondary">MITL</span>{" "}
+              <span className="text-primary">CAMPUS</span>
+            </h1>
+            <h4 className="mb-10 font-extrabold">
+              The turning point in youer life
+            </h4>
+          </div>
 
           <p className="text-base sm:text-lg md:text-xl mb-8 leading-relaxed text-primary-foreground/90">
             Experience world-class education in a vibrant academic community
