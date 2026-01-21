@@ -17,7 +17,7 @@ export default function ContactLeft() {
         <InfoItem
           icon={<Mail size={20} />}
           title="Email"
-          value="infomitlcampus@gmail.com"
+          value="info@mitl.lk"
         />
         <InfoItem
           icon={<MapPin size={20} />}
