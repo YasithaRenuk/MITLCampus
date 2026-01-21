@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-3 text-primary-foreground text-xs sm:text-sm">
                 <li>+9471 222 9922</li>
-                <li>infomitlcampus@gmail.com</li>
+                <li>info@mitl.lk</li>
                 <li>No 1/440, Lake Road, Boralesgamuwa</li>
               </ul>
             </div>
