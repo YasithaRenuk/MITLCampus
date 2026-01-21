@@ -40,7 +40,6 @@ export default function Navbar() {
               width={55}
               height={55}
               alt="Logo"
-              className="rounded-xl"
             />
           </div>
         </div>
