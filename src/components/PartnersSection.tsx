@@ -1,6 +1,19 @@
 import React from "react";
+import p1 from "@/../public/Partners/p1.jpeg"
+import p2 from "@/../public/Partners/p2.jpeg"
+import p3 from "@/../public/Partners/p3.jpeg"
+import p4 from "@/../public/Partners/p4.jpeg"
+import p5 from "@/../public/Partners/p5.jpeg"
+import p6 from "@/../public/Partners/p6.jpeg"
+import Image from "next/image";
+
 
 const PartnersSection: React.FC = () => {
+  
+  const Partnerslogos = [
+    p1,p2,p3,p4,p5,p6
+  ]
+
   return (
     <section className="w-full bg-background py-16 px-4 font-sans">
       <div className="max-w-7xl mx-auto">
@@ -28,6 +41,18 @@ const PartnersSection: React.FC = () => {
                 target.style.display = "none";
               }}
             />
+          </div>
+          <div className="flex items-center justify-center">
+            {Partnerslogos.map((logo, index) => (
+              <div className="p-5">
+                <Image
+                  key={index}
+                  src={logo}
+                  alt={`Partner ${index + 1}`}
+                  className="h-20 w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
