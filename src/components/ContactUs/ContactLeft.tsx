@@ -17,12 +17,12 @@ export default function ContactLeft() {
         <InfoItem
           icon={<Mail size={20} />}
           title="Email"
-          value="info@mitl.lk"
+          value="info@mitlcampus.lk"
         />
         <InfoItem
           icon={<MapPin size={20} />}
           title="Address"
-          value="No 1/440, Lake Road, Boralesgamuwa"
+          value="No. 215/25, Colombo Road, Raththanapitiya, Boralesgamuwa, Sri Lanka."
         />
       </div>
     </div>
