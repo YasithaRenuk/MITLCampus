@@ -32,7 +32,7 @@ const leaders: Leader[] = [
   {
     name: "Mr. Sarath Chandrasiri",
     role: "Head Of Examination & Research Division MITL Campus, Sri Lanka",
-    image: "/Leaders/SeniorConsultant3.jpg",
+    image: "/Leaders",
     description: "Mr. Sarath Chandrasiri is a senior examinations administrator with extensive experience in Sri Lanka’s national examination system. He previously served in a role within the Confidential Examinations Division of the Department of Examinations Sri Lanka, where he was entrusted with highly sensitive responsibilities relating to the security, coordination, and administration of national-level public examinations. During his tenure in the national examinations framework, Mr. Chandrasiri was involved in overseeing confidential examination processes, maintaining strict security protocols, coordinating secure documentation procedures, and ensuring compliance with national standards for assessment integrity. He currently serves as the Head of the Examination & Research Division at MITL Campus, where he leads the development, implementation, and monitoring of examination systems and academic research standards. His responsibilities include examination policy formulation, assessment moderation, quality assurance, data analysis, and the strengthening of research-based academic practices within the institution. With a strong background in examination governance and institutional compliance, Mr. Chandrasiri brings credibility, structure, and high-level security awareness to MITL Campus’s academic assessment systems. His leadership supports the institution’s commitment to maintaining rigorous, transparent, and internationally aligned examination standards."
   },
 ];
